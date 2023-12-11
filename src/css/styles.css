@@ -1,0 +1,608 @@
+/* Variables */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #297743;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+  color: #f8f3f4;
+}
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: #070706;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.801);
+}
+
+nav h1 {
+  color: #d6c107;
+  font-size: 1.5rem;
+}
+
+nav a {
+  font-size: 1.2rem;
+  color: #fcfbf9;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: #d6c107;
+  border-bottom: 2px solid #d6c107;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+/* Hero section */
+.hero {
+  background-color: #297743;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Ajuste para dispositivos móviles */
+  padding: 2rem; /* Ajuste de padding */
+}
+
+.hero img {
+  border-radius: 100px;
+  box-shadow: 0px 6px 15px 6px #d6c107;
+  margin-left: 10px;
+  height: 33.5rem;
+  width: 33.5rem;
+  margin-top: 4rem;
+}
+
+.bio {
+  width: flex;
+  padding: 3rem;
+  border-radius: 100px;
+  box-shadow: 0px 6px 15px 6px #d6c107;
+  margin-left: 10px; /* Ajuste de margen */
+  margin-top: 4rem; /* Ajuste de margen */
+}
+.bio-title {
+  background-color: #297743;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 1.9rem;
+  margin-top: 0rem;
+}
+/* More about */
+.more-about {
+  background-color: #297743;
+  padding: 2rem; /* Ajuste de padding */
+}
+
+.more-about h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+/* Estilos generales para el componente EducationList */
+.education-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.estudio-title {
+  background-color: #297743;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 1.9rem;
+  margin-top: 0rem;
+}
+
+.institucion,
+.titulo,
+.fecha {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 1em;
+  color: #fcfbf9;
+  padding: 0.3rem 0;
+}
+
+/* Estilos para el encabezado "Historial Educativo" */
+.EducationList h2 {
+  background-color: #297743;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  margin-top: 4rem;
+  padding-left: 2rem;
+}
+
+/* Estilos para cada elemento Education dentro de EducationList */
+.Education {
+  background-color: #297743;
+  width: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Ajuste para dispositivos móviles */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.Education .nombre,
+.Education .institution,
+.Education .degree,
+.Education .fieldOfStudy,
+.Education .startDate,
+.Education .endDate {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #fcfbf9;
+}
+
+.institution-logo {
+  width: 2px;
+  height: 2px;
+  margin-right: 10px;
+  margin-top: -4rem;
+}
+
+
+.institution-name,
+.degree-name,
+.date-range {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+/* Skills section */
+.skills {
+  background-color: #297743;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 4rem;
+}
+
+.skill-header {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  font-size: 1.9rem;
+}
+
+.skills-wrapper img {
+  margin-top: 4rem;
+  border-radius: 100px;
+  padding: 1.25rem;
+  box-shadow: 0px 6px 15px 6px #d6c107;
+}
+
+.icon {
+  width: 5.875rem;
+  height: 5.25rem;
+}
+
+/* Projects section */
+.projects {
+  background-color: #297743;
+  padding: 2rem; /* Ajuste de padding */
+}
+
+.project-pic {
+  border-radius: 100px;
+  width: 75%;
+  height: 70%;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-title {
+  background-color: #297743;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.9rem;
+  margin-top: 4rem;
+}
+
+.project-container {
+  text-align: center;
+  width: 60rem;
+  padding: 2rem; /* Ajuste de padding */
+  margin: 0;
+}
+
+.project-container p {
+  background-color: #f4faf6;
+  padding: 1rem;
+}
+.project-link {
+  background-color: #f7fcf8;
+  margin-bottom: var(--bottom-margin);
+  color: #0c0c0c;
+  font-size: 1.5rem;
+}
+.project-title,
+.project-details {
+  background-color: #f7fcf8;
+  margin-bottom: var(--bottom-margin);
+  color: #0c0c0c;
+  font-size: 1.5rem;
+}
+
+/* Contacts section */
+.contact {
+  text-align: center;
+  background-color: #297743;
+  padding: 2rem; /* Ajuste de padding */
+}
+
+.contact-title {
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form-container {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-shadow: 0px 6px 15px 6px #d6c107;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form-container label {
+  line-height: 3em;
+  font-weight: var(--bold-font);
+  font-size: 1.5rem;
+}
+
+.contact-form-container textarea {
+  min-height: 8rem;
+  font-size: 16px;
+  color: var(--primary-color);
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 8px;
+  border: 2px outset var(--primary-color);
+  font-size: 1.5rem;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 20px;
+  margin: 15px 0;
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 100px;
+  font-size: 1.5rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+  color: #297743;
+}
+
+.submit-btn:hover {
+  background-color: #d6c107;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+/* Social buttons */
+.socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socicon {
+  border-radius: 100px;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+/* Scroll to top button */
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Footer section */
+footer {
+  background-color: #297743;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+/* General (utilities) */
+.icon-card,
+.project-card {
+  background-color: #fff;
+  border-radius: 100px;
+  box-shadow: 0px 6px 15px 6px #d6c107;
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 720px) {
+  nav {
+    padding: 1.5rem 1rem;
+  }
+
+  nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+  nav ul li {
+    margin: 8px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
+  .hero img {
+    height: 37.5rem;
+    width: 30rem;
+  }
+
+  .bio {
+    margin-top: -7rem;
+    width: 20.5rem;
+  }
+
+  .more-about {
+    margin-top: 2rem;
+    padding: 1rem 3.5rem;
+  }
+
+  .icon {
+    width: 5.875rem;
+    height: 5.25rem;
+  }
+
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 20.875rem;
+  }
+
+  .contact-form-container {
+    max-width: 23.75rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero img {
+    height: 37.5rem;
+    width: 23rem;
+  }
+
+  .bio {
+    width: 18.3rem;
+  }
+
+  .project-container {
+    width: 17.875rem;
+  }
+}
+
+.cv-button {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: var(--bold-font);
+  background-color: #fff;
+  color: #297743;
+  border: 2px solid #297743;
+  border-radius: 100px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0px 6px 15px 6px #d6c107;
+}
+
+.cv-button:hover {
+  background-color: #d6c107;
+  color: #297743;
+}
+
+/* Estilos para el icono de ubicación */
+.location-icon {
+  background-color: #297743;
+  box-shadow: 0px 6px 15px 6px #d6c107;
+  border-radius: 100px;
+  font-size: 60px;
+  margin-top: 80px;
+}
+
+.location-icon.large {
+  box-shadow: 0px 6px 15px 6px #d6c107;
+  font-size: 26px;
+}
+
+/* Estilos para la tarjeta de ubicación */
+.location-card {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0px 6px 15px 6px #d6c107;
+  border-radius: 100px;
+  z-index: 1;
+}
+
+/* Agrega o ajusta estilos en tu archivo CSS */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.modal-content {
+  max-width: 60%;
+  max-height: 60vh;
+  overflow: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 100px;
+  box-shadow: 0px 6px 15px 6px #d6c107;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.burger-menu.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navigation {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Ajusta estilos para dispositivos móviles */
+  .burger-menu {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background-color: #333;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .navigation li {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+  }
+}
