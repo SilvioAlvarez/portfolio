@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-  --font-family: "Roboto", sans-serf;
+  --font-family: "Roboto", sans-serif;
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
@@ -80,112 +80,164 @@ nav ul li {
 }
 
 .burger-menu {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
   display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.burger-menu.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navigation {
+  display: flex;
+  list-style-type:
+none;
+margin: 0;
+padding: 0;
+}
+
+.navigation li {
+margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+.burger-menu {
+display: block;
+}
+
+.navigation {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  transition: display 0.3s ease; /* Agrega una transición suave */
+}
+
+.navigation.open {
+  display: flex;
+}
+
+.navigation li {
+margin: 0;
+text-align: center;
+padding: 10px;
+}
 }
 
 /* Hero section */
 .hero {
-  background-color: #297743;
-  display: flex;
-  font-size: 1.5rem;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; /* Ajuste para dispositivos móviles */
-  padding: 2rem; /* Ajuste de padding */
+background-color: #297743;
+display: flex;
+font-size: 1.5rem;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 2rem;
 }
 
 .hero img {
-  border-radius: 100px;
-  box-shadow: 0px 6px 15px 6px #d6c107;
-  margin-left: 10px;
-  height: 33.5rem;
-  width: 33.5rem;
-  margin-top: 4rem;
+border-radius: 100px;
+box-shadow: 0px 6px 15px 6px #d6c107;
+margin-left: 10px;
+height: 33.5rem;
+width: 33.5rem;
+margin-top: 4rem;
 }
 
 .bio {
-  width: flex;
-  padding: 3rem;
-  border-radius: 100px;
-  box-shadow: 0px 6px 15px 6px #d6c107;
-  margin-left: 10px; /* Ajuste de margen */
-  margin-top: 4rem; /* Ajuste de margen */
+width: 100%;
+padding: 3rem;
+border-radius: 100px;
+box-shadow: 0px 6px 15px 6px #d6c107;
+margin-left: 0px;
+margin-top: 2rem;
 }
+
 .bio-title {
-  background-color: #297743;
-  text-align: center;
-  margin-bottom: 4rem;
-  font-size: 1.9rem;
-  margin-top: 0rem;
+background-color: #297743;
+text-align: center;
+margin-left: 0px;
+margin-bottom: 4rem;
+font-size: 1.9rem;
+margin-top: 0rem;
 }
+
 /* More about */
 .more-about {
-  background-color: #297743;
-  padding: 2rem; /* Ajuste de padding */
+background-color: #297743;
+padding: 2rem;
 }
 
 .more-about h2 {
-  margin-bottom: var(--bottom-margin);
-  text-align: center;
+margin-bottom: var(--bottom-margin);
+text-align: center;
 }
 
 .more-about p {
-  line-height: var(--line-height);
-  padding: 0.4rem;
-  margin: 0;
-  margin-bottom: 4px;
+line-height: var(--line-height);
+padding: 0.4rem;
+margin: 0;
+margin-bottom: 4px;
 }
 
 /* Estilos generales para el componente EducationList */
 .education-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
 }
 
 .estudio-title {
-  background-color: #297743;
-  text-align: center;
-  margin-bottom: 4rem;
-  font-size: 1.9rem;
-  margin-top: 0rem;
+background-color: #297743;
+text-align: center;
+margin-bottom: 4rem;
+font-size: 1.9rem;
+margin-top: 0rem;
 }
 
 .institucion,
 .titulo,
 .fecha {
-  margin: 0;
-  margin-bottom: 4px;
-  font-size: 1em;
-  color: #fcfbf9;
-  padding: 0.3rem 0;
+margin: 0;
+margin-bottom: 4px;
+font-size: 0.9em;
+color: #fcfbf9;
+padding: 0.3rem 0;
 }
 
 /* Estilos para el encabezado "Historial Educativo" */
 .EducationList h2 {
-  background-color: #297743;
-  text-align: left;
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-  margin-top: 4rem;
-  padding-left: 2rem;
+background-color: #297743;
+text-align: left;
+margin-bottom: 2rem;
+font-size: 1.5rem;
+margin-top: 4rem;
+padding-left: 2rem;
 }
 
 /* Estilos para cada elemento Education dentro de EducationList */
 .Education {
-  background-color: #297743;
-  width: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; /* Ajuste para dispositivos móviles */
-  margin-bottom: 0;
-  padding-bottom: 0;
+background-color: #297743;
+width: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin-bottom: 0;
+padding-bottom: 0;
 }
 
 .Education .nombre,
@@ -194,103 +246,119 @@ nav ul li {
 .Education .fieldOfStudy,
 .Education .startDate,
 .Education .endDate {
-  font-weight: bold;
-  font-size: 1.5em;
-  color: #fcfbf9;
+font-weight: bold;
+font-size: 1.5em;
+color: #fcfbf9;
 }
 
 .institution-logo {
-  width: 2px;
-  height: 2px;
-  margin-right: 10px;
-  margin-top: -4rem;
+width: 2px;
+height: 2px;
+margin-right: 10px;
+margin-top: -4rem;
 }
-
 
 .institution-name,
 .degree-name,
 .date-range {
-  margin: 0;
-  margin-bottom: 4px;
+margin: 0;
+margin-bottom: 4px;
 }
 
 /* Skills section */
 .skills {
-  background-color: #297743;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 4rem;
+background-color: #297743;
+text-align: center;
+font-size: 1.5rem;
+padding: 4rem;
 }
 
 .skill-header {
-  margin-top: 0rem;
-  margin-bottom: 1rem;
-  font-size: 1.9rem;
+margin-top: 2rem;
+margin-bottom: 1rem;
+font-size: 1.9rem;
 }
 
 .skills-wrapper img {
-  margin-top: 4rem;
-  border-radius: 100px;
-  padding: 1.25rem;
-  box-shadow: 0px 6px 15px 6px #d6c107;
+margin-top: rem;
+border-radius: 100px;
+padding: 1.25rem;
+box-shadow: 0px 6px 15px 6px #d6c107;
 }
 
 .icon {
-  width: 5.875rem;
-  height: 5.25rem;
+width: 5.875rem;
+height: 5.25rem;
 }
 
 /* Projects section */
 .projects {
   background-color: #297743;
-  padding: 2rem; /* Ajuste de padding */
+  padding: rem;
+  text-align: center; /* Centra el contenido */
+}
+
+.projects-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los proyectos se envuelvan en una nueva línea si no hay suficiente espacio */
+  justify-content: space-around; /* Distribuye uniformemente los proyectos en el contenedor */
+}
+
+.project-container {
+  width: 100%; /* Ocupa el ancho completo del contenedor padre */
+  max-width: 400px; /* Establece un ancho máximo para cada proyecto */
+  margin: 1rem; /* Añade margen entre los proyectos */
+  box-sizing: border-box; /* Incluye el padding y el border en el ancho y alto total */
 }
 
 .project-pic {
   border-radius: 100px;
-  width: 75%;
-  height: 70%;
-}
-
-.projects-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.projects-title {
-  background-color: #297743;
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.9rem;
-  margin-top: 4rem;
-}
-
-.project-container {
-  text-align: center;
-  width: 60rem;
-  padding: 2rem; /* Ajuste de padding */
-  margin: 0;
+  width: 100%;
+  height: auto; /* Hace que la altura sea automática para mantener la proporción de la imagen */
 }
 
 .project-container p {
   background-color: #f4faf6;
   padding: 1rem;
+  margin: 0;
 }
+
 .project-link {
+  border-radius: 100px;
+  background-color: #297743;
+  box-shadow: 0px 6px 15px 6px #d6c107;
+  margin-bottom: var(--bottom-margin);
+  color: #f6faf7;
+  font-size: 1.5rem;
+}
+.project-link:hover {
+  background-color: #d6c107;
+  color: #297743;
+}
+
+.project-title{
+  margin-top: 2rem;
   background-color: #f7fcf8;
   margin-bottom: var(--bottom-margin);
   color: #0c0c0c;
   font-size: 1.5rem;
 }
-.project-title,
 .project-details {
+  margin-top: 2rem;
   background-color: #f7fcf8;
   margin-bottom: var(--bottom-margin);
   color: #0c0c0c;
   font-size: 1.5rem;
 }
 
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .project-container {
+    width: 100%; /* En pantallas más pequeñas, ocupa el ancho completo */
+    max-width: none; /* Elimina el ancho máximo */
+  }
+}
 /* Contacts section */
 .contact {
   text-align: center;
@@ -301,9 +369,11 @@ nav ul li {
 .contact-title {
   font-size: 1.9rem;
   margin-bottom: 2rem;
+  margin-top: 4rem;
 }
 
 .contact-form-container {
+  border-radius: 100px;
   max-width: 30rem;
   margin: 0 auto;
   padding: 1.5rem;
@@ -357,14 +427,16 @@ nav ul li {
 
 /* Social buttons */
 .socials-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
+background-color: #297743;
+text-align: center;
+padding: 2rem;
 }
 
 .socials {
-  display: flex;
-  align-items: center;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 2rem;
 }
 
 .socicon {
@@ -376,10 +448,14 @@ nav ul li {
 
 /* Scroll to top button */
 .scroll-up {
-  position: fixed;
-  right: 0.5%;
-  bottom: 3%;
-  cursor: pointer;
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #297743;
+border: none;
+border-radius: 100%;
+padding: 10px;
+cursor: pointer;
 }
 
 .up-arrow {
@@ -390,8 +466,9 @@ nav ul li {
 /* Footer section */
 footer {
   background-color: #297743;
-  padding: 1.25rem;
-  text-align: center;
+color: #fcfbf9;
+text-align: center;
+padding: 2rem;
 }
 
 /* General (utilities) */
@@ -406,80 +483,37 @@ footer {
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 720px) {
-  nav {
-    padding: 1.5rem 1rem;
-  }
+.hero img {
+width: 100%;
+height: auto;
+}
 
-  nav ul {
-    position: fixed;
-    background-color: var(--bg-color);
-    flex-direction: column;
-    top: 86px;
-    left: 10%;
-    width: 80%;
-    text-align: center;
-    transform: translateX(120%);
-    transition: transform 0.5s ease-in;
-  }
+.more-about {
+padding: 2rem;
+}
 
-  nav ul li {
-    margin: 8px;
-  }
+.education-list {
+flex-direction: column;
+}
 
-  .burger-menu {
-    display: block;
-  }
+.projects-container {
+  flex-direction: column;
+}
 
-  nav ul.show {
-    transform: translateX(0);
-  }
-
-  .hero img {
-    height: 37.5rem;
-    width: 30rem;
-  }
-
-  .bio {
-    margin-top: -7rem;
-    width: 20.5rem;
-  }
-
-  .more-about {
-    margin-top: 2rem;
-    padding: 1rem 3.5rem;
-  }
-
-  .icon {
-    width: 5.875rem;
-    height: 5.25rem;
-  }
-
-  .projects-container {
-    flex-direction: column;
-  }
-
-  .project-container {
-    width: 20.875rem;
-  }
-
-  .contact-form-container {
-    max-width: 23.75rem;
-  }
+.project-pic {
+width: 100%;
+height: auto;
+}
 }
 
 @media screen and (max-width: 420px) {
-  .hero img {
-    height: 37.5rem;
-    width: 23rem;
-  }
+.nav ul {
+flex-direction: column;
+}
 
-  .bio {
-    width: 18.3rem;
-  }
-
-  .project-container {
-    width: 17.875rem;
-  }
+.nav ul li {
+margin-bottom: 10px;
+}
 }
 
 .cv-button {
@@ -501,6 +535,7 @@ footer {
   background-color: #d6c107;
   color: #297743;
 }
+
 
 /* Estilos para el icono de ubicación */
 .location-icon {
@@ -527,8 +562,7 @@ footer {
   border-radius: 100px;
   z-index: 1;
 }
-
-/* Agrega o ajusta estilos en tu archivo CSS */
+/* Modal styles */
 .modal {
   position: fixed;
   top: 0;
@@ -552,57 +586,25 @@ footer {
   box-shadow: 0px 6px 15px 6px #d6c107;
 }
 
+
+/* Burger menu styles */
 .burger-menu {
-  display: none;
-  cursor: pointer;
-  background: none;
-  border: none;
+display: flex;
+flex-direction: column;
+cursor: pointer;
+background: none;
+border: none;
 }
 
-.burger-menu.open .bar:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.burger-menu.open .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.burger-menu.open .bar:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
+/* Navigation styles */
 .navigation {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+display: flex;
+flex-direction: row;
+list-style-type: none;
+gap: 1.5rem;
 }
 
 .navigation li {
-  margin-right: 20px;
-}
-
-@media only screen and (max-width: 768px) {
-  /* Ajusta estilos para dispositivos móviles */
-  .burger-menu {
-    display: block;
-  }
-
-  .navigation {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    background-color: #333;
-  }
-
-  .navigation.open {
-    display: flex;
-  }
-
-  .navigation li {
-    margin: 0;
-    text-align: center;
-    padding: 10px;
-  }
+font-weight: var(--bold-font);
+font-size: 1.2rem;
 }
